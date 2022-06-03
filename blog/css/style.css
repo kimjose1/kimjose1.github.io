@@ -1,0 +1,222 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+/*imported fonts*/
+@font-face {
+    font-family:"ultra";
+    src : url('../fonts/serif/ultra-regular.ttf');
+    font-weight :normal;
+    font-style: normal;
+}
+@font-face {
+    font-family:"roboto";
+    src: url('../fonts/sans-serif/roboto-regular.ttf');
+    font-weight :normal;
+    font-style: normal;
+}
+@font-face {
+    font-family:"lato";
+    src: url('../fonts/sans-serif/lato-regular.ttf');
+    font-weight :normal;
+    font-style: normal;
+}
+
+/*Typography*/
+
+p {
+    font-family: roboto, Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: lato, Helvetica, sans-serif;
+    letter-spacing: 0.0325;
+}
+h1 {
+    font-size: 4rem;
+    letter-spacing: 0.25;
+    transform: rotate(-5deg);
+}
+h2 {
+    font-size: 1.5rem;
+}
+.highlight {
+    display: inline-block;
+    font-family: ultra, Georgia, serif;
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius:1rem ;
+    background-color:rgb(92, 112, 201);
+    color:bisque;
+    box-shadow: 5px 5px 4px -1px #888;
+    letter-spacing: .325rem;
+}
+/*general setup*/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+}
+
+/*layout*/
+header {
+    padding: .5rem 0 1rem 0;
+    text-align: center;
+}
+nav{
+    
+    margin-top: 3rem;
+}
+.main-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 2.5rem;
+}
+article{
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+aside {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-top: 0;
+    border-left: 1px solid black;
+    padding-left: 2.5rem;
+}
+aside img{
+    height:fit-content
+}
+aside p {
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
+}
+.subsection {
+    display: flex;
+}
+a {
+    text-decoration: none;
+}
+
+
+/* Images and Figures */
+
+img {
+    width: 100%;
+}
+figure {
+    margin: 0px;
+}
+.article-image {
+    width: 30%;
+    float: left;
+    margin-right: .75rem;
+}
+.subsection{
+    margin: 1rem 0;
+}
+
+.subsection figure{
+    width: 25%;
+    margin: 0 1rem;
+    background-color: #F2E4C4;
+    border-bottom: 3rem;
+}
+.subsection figure figcaption{
+    padding: 0.5rem 0.5rem;
+}
+/*Navigation*/
+nav {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+nav a {
+    display: inline-block;
+    font-family: lato, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: rgb(59, 57, 57);
+    padding: 1.25rem 2rem;
+}
+.blog{
+    text-decoration:line-through;
+    transform: rotate(5deg);
+}
+.subscribe {
+    margin-top: 5rem;
+    border-top: 5rem;
+    border-bottom:2rem;
+    display: block;
+    font-size: 2rem;
+    color :rgb(245, 242, 242);
+    font-family: lato, Helvetica, sans-serif;
+    background-color: rgb(81, 81, 144);
+}
+footer {
+    clear:both;
+    overflow:auto;
+    margin:3% 2%;
+   
+}
+.links{
+    float: right;
+    text-align:right;
+}
+footer p{
+    float: left
+
+}
